@@ -4,6 +4,7 @@ const Settings = () => {
   return (
     <div>
         Settings
+        <div className='btn btn-primary'>CLICK ME</div>
     </div>
   )
 }
