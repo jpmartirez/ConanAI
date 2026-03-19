@@ -28,7 +28,7 @@ const Drawer = ({children}: DrawerProps) => {
             </div>
 
             {/* PROFILE */}
-            <button className='btn btn-primary'>Login</button>
+            <button className='btn btn-primary rounded-2xl'>Login</button>
             </nav>
             {/* Page content here */}
             <div className="p-4">{children}</div>

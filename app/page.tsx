@@ -11,7 +11,7 @@ const Homepage = () => {
 
   return (
     <div className='flex items-center justify-center w-full flex-col'>
-      <div className='flex flex-col items-center justify-between'>
+      <div className='flex flex-col items-center justify-between mt-12'>
                     <h1 className='text-neutral-800 text-4xl md:text-6xl/16 max-w-3xl text-center leading-tight font-semibold'>Make your <span className='text-success'>AI text</span> sound <span className='text-primary'>natural</span> and <span className='text-accent'>human</span></h1>
                     <div className='mt-10 w-full flex flex-col items-center justify-center'>
                         <div className='bg-white border shadow-2xl border-blue-400 rounded-2xl p-4 sm:p-6 w-full max-w-147.5'>
