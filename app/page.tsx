@@ -1,6 +1,5 @@
 'use client'
 import CallAction from '@/components/CallAction'
-import Stats from '@/components/Stats'
 import React, { useState } from 'react'
 
 const Homepage = () => {
@@ -34,11 +33,6 @@ const Homepage = () => {
                         </div>
                     </div>
       </div>
-
-       {/* STATISTICS */}
-        <div className='mt-12'>
-          <Stats/>
-        </div>
 
         {/* CALL TO ACTION */}
         <div className='w-full '>
