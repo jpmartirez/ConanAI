@@ -29,7 +29,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Drawer>
-           {children}
+          <div className="bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] min-h-[80vh] w-full bg-repeat">
+            {children}
+          </div>
         </Drawer>
        
       </body>

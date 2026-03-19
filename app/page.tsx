@@ -1,13 +1,22 @@
-import React from 'react'
+'use client'
+import CallAction from '@/components/CallAction'
+import Stats from '@/components/Stats'
+import React, { useState } from 'react'
 
 const Homepage = () => {
+  
+  const [text, setText] = useState<string>("")
+  const [humanizedText, setHumanizedText] = useState<string>("")
+  const [loading, setLoading] = useState<boolean>(false)
+
+
   return (
-    <div className='flex items-center justify-center w-full h-[80vh]'>
+    <div className='flex items-center justify-center w-full flex-col'>
       <div className='flex flex-col items-center justify-between'>
-                    <h1 className='text-neutral-800 text-4xl md:text-6xl/16 max-w-3xl text-center leading-tight'>Make your AI text sound natural and human</h1>
+                    <h1 className='text-neutral-800 text-4xl md:text-6xl/16 max-w-3xl text-center leading-tight font-semibold'>Make your <span className='text-success'>AI text</span> sound <span className='text-primary'>natural</span> and <span className='text-accent'>human</span></h1>
                     <div className='mt-10 w-full flex flex-col items-center justify-center'>
                         <div className='bg-white border shadow-2xl border-blue-400 rounded-2xl p-4 sm:p-6 w-full max-w-147.5'>
-                            <textarea className='w-full bg-transparent text-gray-700 text-sm mb-12 outline-none resize-none border-none' placeholder='Paste your AI-generated text here. We will rewrite it to sound natural and human...' rows={5} />
+                            <textarea onChange={e=>setText(e.target.value)} value={text} className='w-full bg-transparent text-gray-700 text-sm mb-12 outline-none resize-none border-none' placeholder='Paste your AI-generated text here. We will rewrite it to sound natural and human...' rows={5} />
                             
                             <div className='flex flex-wrap items-center justify-between gap-2.5'>
                         
@@ -24,7 +33,17 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+      </div>
+
+       {/* STATISTICS */}
+        <div className='mt-12'>
+          <Stats/>
+        </div>
+
+        {/* CALL TO ACTION */}
+        <div className='w-full '>
+          <CallAction/>
+        </div>
     </div>
   )
 }
